@@ -110,7 +110,7 @@ const calculateItemsNeeded = (ingredients) => {
     const haveIngredients = ingredients.filter(item => item.hasIngredient === true)
     const needed = ingredients.length - haveIngredients.length
     const ingredientsLength = ingredients.length
-    if (needed < 1 && ingredients.length > 1) {
+    if (needed < 1 && ingredients.length > 0) {
         return "You have all of the ingredients"
     } else if (needed > 0 && needed < ingredientsLength) {
         return `You have ${haveIngredients.length} out of ${ingredientsLength} ingredients.`
